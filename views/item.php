@@ -33,6 +33,7 @@
    <?php endforeach; ?>
    </tbody>
  </table>
+ <button type="button" class="btn  btn-outline-success" onClick="window.location.href='/form-inventory/add/<?=$project['id']?>';">+</button>
  </div>
 </body>
 </html>

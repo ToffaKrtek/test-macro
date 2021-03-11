@@ -4,9 +4,9 @@
       //Мб, дропнуть в отдельный файл с конфигами
       public $routes =  array(
         '/item/([0-9]+)' => 'project/item/$1', //actionView в ProjectController (отчет по Id проекта)
-        '/form/update/([0-9]+)' => 'form/update/$1', //actionForm в FormController (форма для добавления\изменения )
-        '/form/delete/([0-9]+)' => 'form/delete/$1', //actionForm в FormController (форма для добавления\изменения )
-        '/form/add' => 'form/add',
+        '/form-inventory/update/([0-9]+)' => 'form/update/$1', //actionForm в FormController (форма для добавления\изменения )
+        '/form-inventory/delete/([0-9]+)' => 'form/delete/$1', //actionForm в FormController (форма для добавления\изменения )
+        '/form-inventory/add/' => 'form/add/',
         '/' => 'project/list', //Главная страница (список всех элементов)
       );
 
