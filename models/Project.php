@@ -4,6 +4,7 @@ include_once ROOT . '/models/Main.php';
 
   class Project extends Main
   {
+    public static $table_name = 'projects'; //Имя таблицы, для использовани в родительском методе
     
     protected function add(Project $item)
     {

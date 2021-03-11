@@ -10,13 +10,15 @@
 </head>
 <body>
   <div class="container">
-   <h1><?=$project['name']?></h1>
+    <h5><a href="/">Main</a></h5><h1><?=$project['name']?></h1>
+  <span> <a href="/project/update/<?=$project['id']?>">UPT</a> <a href="/project/delete/<?=$project['id']?>">DEL</a></span>
    <table class="table t table-hover">
    <thead>
      <tr>
        <th>Наименование номенклатуры</th>
        <th>Плановый объем</th>
        <th>Плановая стоимость</th>
+       <th></th>
      </tr>
    </thead>
    <tbody>
@@ -25,6 +27,9 @@
        <td><?=$item['name']?></td>
        <td><?=$item['quantity_plan']?></td>
        <td><?=$item['price_plan']?></td>
+       <td>
+         <a>UPT</a>
+         <a>DEL</a></td>
      </tr>
    <?php endforeach; ?>
    </tbody>
