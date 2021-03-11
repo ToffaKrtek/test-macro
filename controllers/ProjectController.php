@@ -13,7 +13,7 @@ class ProjectController
   public function actionItem(int $id)
   {
     $project = Project::getById( $id);
-    $inventoryList = ProjectInventory::getAll();
+    $inventoryList = ProjectInventory::getInventory($id);
     require_once(ROOT.'/views/item.php');
     return true;
   }

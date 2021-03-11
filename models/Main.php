@@ -16,7 +16,7 @@
       return "No ID!";
     }
   }
-  
+
   public static function getAll()
   {
     $db = DB::getConnect();
