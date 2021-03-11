@@ -54,7 +54,8 @@
       </div>
   <br>
     <div class="form-group">
-     <button type="submit" name="submit" class="btn btn-primary">Добавить</button>
+     <button type="submit" name="submit" class="btn btn-primary">
+       <?php if($update_flag):?>Сохранить<?php else:?>Добавить<?php endif;?></button>
      </div>
   </form>
   </div>

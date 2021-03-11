@@ -28,7 +28,7 @@ class ProjectInventory extends Main
       return "No ID!";
     }
   }
-  public static function add(int $nom_id, int $project_id, string $name_nom, float $quantity_plan, float $price_plan)
+  public static function add(int $nom_id, int $project_id, float $quantity_plan, float $price_plan)
   {
     $db = DB::getConnect();
     $sql = 'INSERT INTO projects_inventory (projects_id, noms_id, quantity_plan, price_plan) VALUES (:project_id, :nom_id, :quantity_plan, :price_plan)';
@@ -39,9 +39,15 @@ class ProjectInventory extends Main
     $result->bindParam(':price_plan', $price_plan, PDO::PARAM_STR);
     return $result->execute();
   }
-  protected function update(int $id)
-  {
 
+  public static function update(int $id, int $projects_id, int $noms_id, float $quantity_plan, float $price_plan)
+  {
+    $db = DB::getConnect();
+    $sql = 'UPDATE projects_inventory SET projects_id=?, noms_id=?, quantity_plan=?, price_plan=? WHERE id=?';
+    $result =   $db->prepare($sql);
+
+    return $result->execute([$projects_id, $noms_id, $quantity_plan, $price_plan, $id]);
   }
+
 }
  ?>

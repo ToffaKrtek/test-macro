@@ -34,5 +34,13 @@ class InventoryNoms extends Main
 
     return true;
   }
+  public static function update(int $id, string $name_nom, float $price, string $type)
+  {
+    $db = DB::getConnect();
+    $sql = 'UPDATE inventory_noms SET name=?, price=?, type=? WHERE id=?';
+    $result =   $db->prepare($sql);
+
+    return $result->execute([$name_nom, $price, $type, $id]);
+  }
 }
  ?>
