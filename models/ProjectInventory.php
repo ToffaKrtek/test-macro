@@ -28,8 +28,9 @@ class ProjectInventory extends Main
       return "No ID!";
     }
   }
-  public static function add(int $nom_id, int $project_id, float $quantity_plan, float $price_plan)
+  public static function add(int $nom_id, int $project_id, float $quantity_plan, float $price)
   {
+    $price_plan = $quantity_plan * $price;
     $db = DB::getConnect();
     $sql = 'INSERT INTO projects_inventory (projects_id, noms_id, quantity_plan, price_plan) VALUES (:project_id, :nom_id, :quantity_plan, :price_plan)';
     $result =   $db->prepare($sql);
