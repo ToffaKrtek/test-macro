@@ -25,14 +25,14 @@ class ProjectController
         $inventoryList[array_search($inventory['name'], $inventoryNames)]['quantity_plan'] += $inventory['quantity_plan'];
         $inventoryList[array_search($inventory['name'], $inventoryNames)]['price_plan'] += $inventory['price_plan'];
         $summa['quantity_sum'] += $inventory['quantity_plan'];
-        $summa['price_sum'] += $inventory['quantity_plan'];
+        $summa['price_sum'] += $inventory['price_plan'];
       }else
         {
           $inventoryList[$key] = $inventory;
           $inventoryNames += [$inventory ['name']];
 
           $summa['quantity_sum'] += $inventory['quantity_plan'];
-          $summa['price_sum'] += $inventory['quantity_plan'];
+          $summa['price_sum'] += $inventory['price_plan'];
         }
       }
 
