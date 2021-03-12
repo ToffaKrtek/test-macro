@@ -15,7 +15,7 @@
      <tr>
        <th>Наименование номенклатуры</th>
        <th>Плановый объем</th>
-       <th>Плановая стоимость</th>
+       <th>Плановая Цена</th>
      </tr>
    </thead>
    <tbody>
@@ -27,6 +27,11 @@
        <td><?=$item['price_plan']?></td>
      </tr>
    <?php endforeach; ?>
+   <tr>
+   <th>Итого</th>
+   <th><?=$summa['quantity_sum']?></th>
+   <th><?=$summa['price_sum']?></th>
+   </tr>
    </tbody>
  </table>
  <button type="button" class="btn  btn-outline-success" onClick="window.location.href='/form-inventory/add/<?=$project['id']?>';">+</button>
